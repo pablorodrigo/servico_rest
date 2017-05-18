@@ -17,14 +17,14 @@ public class UsuarioBusiness {
         dao.cadastrar(usuario);
     }
 
-    public Usuario consultar(String nome) {
+    public Usuario consultar(Long id) {
 
-        return dao.consultar(nome);
+        return dao.consultar(id);
     }
 
-    public Usuario deletar(String nome) {
+    public Usuario deletar(Long id) {
 
-        return dao.deletar(nome);
+        return dao.deletar(id);
 
     }
 

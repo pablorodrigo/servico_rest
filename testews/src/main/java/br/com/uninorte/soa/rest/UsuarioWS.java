@@ -14,10 +14,11 @@ public class UsuarioWS {
     private UsuarioBusiness business = new UsuarioBusiness();
 
     @GET
+    @Path("/listar")
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     public Response listar() {
         List<Usuario> result = business.listar();
-        System.out.println("doGET(): /rest/usuario/");
+        System.out.println("doGET():");
         if (!result.isEmpty()) {
             return Response.ok(result).build();
         }
@@ -25,22 +26,23 @@ public class UsuarioWS {
     }
 
     @POST
+    @Path("/cadastrar")
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response cadastrar(Usuario usuario) {
         business.cadastrar(usuario);
 
-        System.out.println("POST(): /rest/usuario/");
+        System.out.println("POST(): ");
 
-        return Response.ok("{\"resultado\":\"funfou\"}").build();
+        return Response.ok("{\"resultado\":\"sucesso\"}").build();
     }
 
     @GET
-    @Path("/{nome}")
+    @Path("/consultar/{id}")
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
-    public Response consultar(@PathParam("nome") String nome) {
-        Usuario result = business.consultar(nome);
-        System.out.println("doGET(): /rest/usuario/{nome}");
+    public Response consultar(@PathParam("id") Long id) {
+        Usuario result = business.consultar(id);
+        System.out.println("doGET():");
         if (result != null) {
             return Response.ok(result).build();
         }
@@ -48,11 +50,11 @@ public class UsuarioWS {
     }
 
     @DELETE
-    @Path("/{nome}")
+    @Path("/deletar/{id}")
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
-    public Response deletar(@PathParam("nome") String nome) {
-        Usuario result = business.deletar(nome);
-        System.out.println("doDELETE(): /rest/usuario/{nome}");
+    public Response deletar(@PathParam("id") Long id) {
+        Usuario result = business.deletar(id);
+        System.out.println("doDELETE():");
         if (result != null) {
             return Response.ok(result).build();
         }
@@ -60,11 +62,12 @@ public class UsuarioWS {
     }
 
     @PUT
+    @Path("/alterar/")
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response alterar(Usuario usuario) {
 
-        System.out.println("PUT(): /rest/usuario/");
+        System.out.println("PUT():");
 
         usuario = business.alterar(usuario);
 
