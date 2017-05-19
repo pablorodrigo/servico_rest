@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Lista Usuarios</string>
+
+    <string name="nav_drawer_username"></string>
+    <string name="nav_drawer_email"></string>
+
+    <string name="listar">Listar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="consultar">Consultar</string>
+    <string name="alterar">Alterar</string>
+    <string name="deletar">Deletar</string>
+    <string name="vazio">Vazio</string>
+
+    <string name="hintNome">Nome</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintTelefone">Telefone</string>
+    <string name="hintId">Id</string>
+
+    <string name="btnCadastrar">Cadastrar</string>
+    <string name="btnConsultar">Consultar</string>
+    <string name="btnAlterar">Alterar</string>
+    <string name="btnDeletar">Deletar</string>
+
+    <string name="nav_menu_opcoes">Opções</string>
+
+</resources>

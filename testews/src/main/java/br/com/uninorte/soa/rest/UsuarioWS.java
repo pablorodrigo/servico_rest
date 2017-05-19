@@ -30,9 +30,18 @@ public class UsuarioWS {
     @Produces(MediaType.APPLICATION_JSON + ";charset=utf-8")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response cadastrar(Usuario usuario) {
+
+        if (usuario == null){
+            System.out.println("POST(): error");
+            return  Response.ok("{\"resultado\":\"error ao cadastrar\"}").build();
+        }
+
+        List<Usuario> result = business.listar();
+        usuario.setId(result.size()+1);
+
         business.cadastrar(usuario);
 
-        System.out.println("POST(): ");
+        System.out.println("POST(): correto");
 
         return Response.ok("{\"resultado\":\"sucesso\"}").build();
     }

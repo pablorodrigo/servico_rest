@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.com.palheta.uninorte">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ConsumirServicoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".view.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar.NavDrawer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.CadastrarActivity"
+            android:parentActivityName=".view.activity.MainActivity">>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.activity.ConsultarActivity"
+            android:parentActivityName=".view.activity.MainActivity">>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.activity.AlterarActivity"
+            android:parentActivityName=".view.activity.MainActivity">>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.activity.DeletarActivity"
+            android:parentActivityName=".view.activity.MainActivity">>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".view.activity.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

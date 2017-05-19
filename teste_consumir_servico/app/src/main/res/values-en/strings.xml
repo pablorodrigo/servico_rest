@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">List User</string>
+    <string name="listar">List</string>
+    <string name="cadastrar">Register</string>
+    <string name="consultar">Consult</string>
+    <string name="alterar">Change</string>
+    <string name="deletar">Delete</string>
+    <string name="vazio">Void</string>
+
+    <string name="hintNome">Name</string>
+    <string name="hintEmail">Email</string>
+    <string name="hintTelefone">Phone</string>
+    <string name="hintId">Id</string>
+
+    <string name="btnCadastrar">Register</string>
+    <string name="btnConsultar">Consult</string>
+    <string name="btnAlterar">Change</string>
+    <string name="btnDeletar">Delete</string>
+
+    <string name="nav_menu_opcoes">Options</string>
+</resources>
